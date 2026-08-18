@@ -14,5 +14,12 @@ cask "openyoink" do
 
   app "OpenYoink.app"
 
+  # 新版 Homebrew 会给 cask 下载打 quarantine（安装时被 Finder 拦截）。
+  # 与本仓库 README 给手动安装者的指引一致：安装后移除 quarantine。
+  postflight do
+    system_command "/usr/bin/xattr",
+                   args: ["-dr", "com.apple.quarantine", "#{appdir}/OpenYoink.app"]
+  end
+
   zap trash: "~/Library/Containers/com.weijue.OpenYoink"
 end
