@@ -1,16 +1,18 @@
 cask "openyoink" do
-  version "1.0.2"
-  sha256 "2b69285ba4952dda62ecf2ea8bdfaa358e2837eb5274fad42f8c3cdf31611f68"
+  version "1.1.1"
+  sha256 "3f19f0cedeaf67609c5415f898fd405dfd970eb0d30c0b7316ca4af1393a6e09"
 
   url "https://github.com/MuQY1818/OpenYoink/releases/download/v#{version}/OpenYoink-#{version}.dmg"
   name "OpenYoink"
-  desc "Native macOS drag-and-drop shelf for files, text, images and links"
+  desc "Drag-and-drop shelf for files, text, images and links"
   homepage "https://github.com/MuQY1818/OpenYoink"
 
   livecheck do
-    url :stable
+    url :url
     strategy :github_latest
   end
+
+  depends_on macos: :sequoia
 
   app "OpenYoink.app"
 
