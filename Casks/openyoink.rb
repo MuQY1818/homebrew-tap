@@ -1,6 +1,6 @@
 cask "openyoink" do
-  version "1.8.10"
-  sha256 "99d0a59b4bdb8176cd25bd2e39759746884b517462adaa6962601f65b5d040fe"
+  version "1.8.11"
+  sha256 "f0065ab0601d0b64dee9cb1b2a1610e6152122e1d00efbaf71cbf059ed7c73cb"
 
   url "https://github.com/MuQY1818/OpenYoink/releases/download/v#{version}/OpenYoink-#{version}.dmg"
   name "OpenYoink"
